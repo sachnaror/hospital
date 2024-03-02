@@ -1,25 +1,41 @@
-
+# forms.py
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
-from .models import User
+from .models import CustomUser
+
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = CustomUser
+        fields = UserCreationForm.Meta.fields + \
+            ('user_type', 'profile_picture',
+             'address_line1', 'city', 'state', 'postal_code',)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get("password1")
+        confirm_password = cleaned_data.get("password2")
+
+        if password and confirm_password and password != confirm_password:
+            self.add_error("password2", "Your passwords must match")
 
 
 class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=True)
-    last_name = forms.CharField(max_length=30, required=True)
     email = forms.EmailField(
         max_length=254, help_text='Required. Inform a valid email address.')
-    profile_picture = forms.ImageField()
-    address_line1 = forms.CharField(max_length=255)
-    city = forms.CharField(max_length=100)
-    state = forms.CharField(max_length=100)
-    pincode = forms.CharField(max_length=6)
-    is_patient = forms.BooleanField(required=False)
-    is_doctor = forms.BooleanField(required=False)
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email', 'password1', 'password2', 'profile_picture',
-                  'address_line1', 'city', 'state', 'pincode', 'is_patient', 'is_doctor')
+        fields = ('username', 'email', 'password1', 'password2', )
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=100)
+    password = forms.CharField(widget=forms.PasswordInput)
+
+    class Meta:
+        model = User
+        fields = ('username', 'password', )

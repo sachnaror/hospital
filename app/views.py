@@ -1,25 +1,26 @@
 # accounts/views.py
 
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import redirect, render
 
-from .forms import SignUpForm
+from .forms import CustomUserCreationForm, SignUpForm
+from .models import Doctor
 
 
 def signup_view(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST, request.FILES)
+        form = CustomUserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
-            user.refresh_from_db()  # Load the profile instance created by the signal
-            user.save()
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-            return redirect('dashboard')
+            if user.user_type == 1:
+                return redirect('patient_dashboard')
+            else:
+                return redirect('doctor_dashboard')
     else:
-        form = SignUpForm()
+        form = CustomUserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
 
@@ -32,20 +33,22 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                if user.is_patient:
+                if user.user_type == 1:
                     return redirect('patient_dashboard')
-                elif user.is_doctor:
+                else:
                     return redirect('doctor_dashboard')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
 
+# views.py continued
+
 def patient_dashboard_view(request):
-    # Implement your logic to display patient dashboard
-    pass
+    # Assuming the user is logged in
+    return render(request, 'patient_dashboard.html', {'user': request.user})
 
 
 def doctor_dashboard_view(request):
-    # Implement your logic to display doctor dashboard
-    pass
+    # Assuming the user is logged in
+    return render(request, 'doctor_dashboard.html', {'user': request.user})
