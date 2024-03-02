@@ -11,6 +11,9 @@ class CustomUser(AbstractUser):
         (2, 'doctor'),
     )
     user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
     profile_picture = models.ImageField(upload_to='profile_pics/')
     address_line1 = models.CharField(max_length=255)
     city = models.CharField(max_length=100)
@@ -18,7 +21,7 @@ class CustomUser(AbstractUser):
     postal_code = models.CharField(max_length=6)
 
     class Meta:
-        db_table = 'app_customuser'
+        db_table = 'app_user'
 
     def __str__(self):
         return self.username

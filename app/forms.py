@@ -11,7 +11,7 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = CustomUser
         fields = UserCreationForm.Meta.fields + \
-            ('user_type', 'profile_picture',
+            ('user_type', 'first_name', 'last_name', 'email', 'profile_picture',
              'address_line1', 'city', 'state', 'postal_code',)
 
     def clean(self):

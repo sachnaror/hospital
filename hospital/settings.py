@@ -68,7 +68,7 @@ AUTH_USER_MODEL = 'app.CustomUser'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hospital_db',
+        'NAME': 'hospital',
         'USER': 'mona',
         'PASSWORD': 'lisa',
         'HOST': '127.0.0.1',
