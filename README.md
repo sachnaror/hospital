@@ -91,6 +91,8 @@ To install the project, follow these steps:
 
 - If you have any questions or feedback, please contact me at:
 
+```
 Email: <schnaror@gmail.com>
 Phone: 95603-30483
 Address: Sector 108, Noida
+```
