@@ -31,20 +31,28 @@ To install the project, follow these steps:
 
 2. Navigate to the project directory:
 
+```
    cd your-project-name
+```
 
 3. Install the required dependencies:
 
+```
    pip install -r requirements.txt
+```
 
 3. Apply the migrations to create the database schema:
 
+```
    python manage.py makemigrations
    python manage.py migrate
+```
 
 4. Run the Django development server:
 
+```
    python manage.py runserver
+```
 
 5. Visit <http://127.0.0.1:8000/> in your web browser to view the application.
 
