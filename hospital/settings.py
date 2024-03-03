@@ -48,7 +48,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'hospital.wsgi.application'
-
+DJANGO_SETTINGS_MODULE = 'hospital.settings'
 AUTH_USER_MODEL = 'app.CustomUser'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
