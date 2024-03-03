@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o!(5y&*c148(j#_)-fb1+1*t02fli4jb4f*$random9&g8t)fp-#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['hospital-tzoco.ondigitalocean.app', 'localhost', '127.0.0.1']
 
@@ -74,7 +74,7 @@ DATABASES = {
         'NAME': 'hospital',
         'USER': 'mona',
         'PASSWORD': 'lisa',
-        'HOST': 'https://hospital-tzoco.ondigitalocean.app',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
