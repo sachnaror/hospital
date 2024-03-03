@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-o!(5y&*c148(j#_)-fb1+1*t02fli4jb4f*$random9&g8t)fp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hospital-tzoco.ondigitalocean.app']
+ALLOWED_HOSTS = ['hospital-tzoco.ondigitalocean.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
