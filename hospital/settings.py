@@ -74,7 +74,7 @@ DATABASES = {
         'NAME': 'hospital',
         'USER': 'mona',
         'PASSWORD': 'lisa',
-        'HOST': '127.0.0.1',
+        'HOST': 'https://hospital-tzoco.ondigitalocean.app',
         'PORT': '3306',
     }
 }
