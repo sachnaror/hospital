@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'corsheaders'
 
 
 ]
@@ -41,7 +42,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://hospital-tzoco.ondigitalocean.app",
 ]
 
 ROOT_URLCONF = 'hospital.urls'
