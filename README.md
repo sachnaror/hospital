@@ -25,14 +25,14 @@ To install the project, follow these steps:
 1. Clone the repository to your local machine:
 
    ```
-   git clone https://your-repository-url.git
-   cd your_project_name
+   git clone https://github.com/sachnaror/hospital.git
+
    ```
 
 2. Navigate to the project directory:
 
 ```
-   cd your-project-name
+   cd hospital
 ```
 
 3. Install the required dependencies:
@@ -54,7 +54,7 @@ To install the project, follow these steps:
    python manage.py runserver
 ```
 
-5. Visit <http://127.0.0.1:8000/> in your web browser to view the application.
+5. Visit <https://hospital-tzoco.ondigitalocean.app/> in your web browser to view the application.
 
 ## Usage
 
@@ -71,21 +71,19 @@ To install the project, follow these steps:
 - Django - The web framework used
 - Bootstrap CDN - Used for responsive frontend design
 
-## Contributing
-
-- To contribute to this project, follow these steps:
-
 ## Fork the repository
 
-1. Create a new branch: git checkout -b <branch_name>.
+1. Create a new branch: git checkout -b master
 2. Make your changes and commit them: git commit -m '<commit_message>'.
-3. Push to the original branch: git push origin <project_name>/<location>.
+3. Push to the original branch: git push origin hospital/master
 4. Create the pull request.
 5. Alternatively, see the GitHub documentation on creating a pull request.
 
-## License
+## Database
 
-- This project is licensed under the MIT License - see the LICENSE.md file for details.
+- Check this table for the data poured when signup form is submitted. For the tasks purpose, i have one table for all save and retrieve data :
+
+![alt text](image.png)
 
 ## Contact
 
