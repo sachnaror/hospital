@@ -1,14 +1,13 @@
 # Django User Authentication Project
 
-This project is a Django-based web application that implements custom user authentication, handling different types of users: Patients and Doctors. Each user type has its own dashboard, which they are redirected to upon login. The project utilizes Django's authentication system, custom user models, and Bootstrap for front-end styling.
+This project is a Django-based web application that implements custom user authentication, handling different types of users: Patients and Doctors. Each user type has its own dashboard, which they are redirected to upon login. The project utilizes Django's authentication system, custom user models, and Bootstrap.
 
 ## Features
 
 - Custom User Model supporting two types of users: Patient and Doctor.
 - User signup and login system with profile picture upload.
-- Separate dashboards ("view details" for now for this task's purpose only) for Patients and Doctors 
+- Separate dashboards ("view details" for now for this task's purpose only) for Patients and Doctors
 - Password and Confirm Password match validation.
-- Use of Bootstrap CDN for responsive design.
 
 ## Prerequisites
 
@@ -86,7 +85,6 @@ To install the project, follow these steps:
 <img width="383" alt="Screenshot 2024-03-04 at 10 08 24 AM" src="https://github.com/sachnaror/hospital/assets/9551754/2dc5e360-0966-465f-9ab6-0bfd0004613b">
 
 <img width="1292" alt="image" src="https://github.com/sachnaror/hospital/assets/9551754/ca73252b-742b-41b7-864d-9259db8393db">
-
 
 ## Contact
 
