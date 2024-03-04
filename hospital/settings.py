@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o!(5y&*c148(j#_)-fb1+1*t02fli4jb4f*$random9&g8t)fp-#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['hospital-tzoco.ondigitalocean.app', 'localhost', '127.0.0.1']
 
@@ -29,10 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'corsheaders'
-
-
+    'corsheaders',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -44,11 +43,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 
+
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://hospital-tzoco.ondigitalocean.app", 'localhost', '127.0.0.1'
+    "https://hospital-tzoco.ondigitalocean.app",
+    "http://hospital-tzoco.ondigitalocean.app",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
 ]
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
