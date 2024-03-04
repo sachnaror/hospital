@@ -125,15 +125,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 # STATIC_URL = 'static/'
 
-# STATIC_URL = 'static/'
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = "/static/" "/profile_pics/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "profile_pics")
 
 
 # Default primary key field type
