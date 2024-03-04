@@ -6,7 +6,7 @@ This project is a Django-based web application that implements custom user authe
 
 - Custom User Model supporting two types of users: Patient and Doctor.
 - User signup and login system with profile picture upload.
-- Separate dashboards for Patients and Doctors.
+- Separate dashboards ("view details" for now for this task's purpose only) for Patients and Doctors 
 - Password and Confirm Password match validation.
 - Use of Bootstrap CDN for responsive design.
 
@@ -83,7 +83,10 @@ To install the project, follow these steps:
 
 - Check this table for the data poured when signup form is submitted. For the tasks purpose, i have one table for all save and retrieve data :
 
-![alt text](image.png)
+<img width="383" alt="Screenshot 2024-03-04 at 10 08 24 AM" src="https://github.com/sachnaror/hospital/assets/9551754/2dc5e360-0966-465f-9ab6-0bfd0004613b">
+
+<img width="1292" alt="image" src="https://github.com/sachnaror/hospital/assets/9551754/ca73252b-742b-41b7-864d-9259db8393db">
+
 
 ## Contact
 
