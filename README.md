@@ -82,6 +82,8 @@ To install the project, follow these steps:
 
 - Check this table for the data poured when signup form is submitted. For the tasks purpose, i have one table for all save and retrieve data :
 
+<img width="999" alt="image" src="https://github.com/sachnaror/hospital/assets/9551754/b5437b34-8a7e-4a30-8894-6dcc5461b580">
+
 <img width="383" alt="Screenshot 2024-03-04 at 10 08 24 AM" src="https://github.com/sachnaror/hospital/assets/9551754/2dc5e360-0966-465f-9ab6-0bfd0004613b">
 
 <img width="1292" alt="image" src="https://github.com/sachnaror/hospital/assets/9551754/ca73252b-742b-41b7-864d-9259db8393db">
