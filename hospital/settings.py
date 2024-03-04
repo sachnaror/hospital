@@ -47,9 +47,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://hospital-tzoco.ondigitalocean.app",
+    "https://hospital-tzoco.ondigitalocean.app", 'localhost', '127.0.0.1'
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'hospital.urls'
 
 TEMPLATES = [
