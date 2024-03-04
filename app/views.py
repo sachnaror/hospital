@@ -70,7 +70,10 @@ def signup_view_at_home(request):
         form = CustomUserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('login')
+            if request.user.user_type == 1:
+                return redirect('patient_dashboard')
+            elif request.user.user_type == 2:
+                return redirect('doctor_dashboard')
     else:
         form = CustomUserCreationForm()
     return render(request, 'signup.html', {'form': form})
