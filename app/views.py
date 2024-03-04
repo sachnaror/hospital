@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
+from django.views.decorators.csrf import csrf_protect
 
 from .forms import CustomUserCreationForm
 
@@ -77,3 +78,16 @@ def signup_view_at_home(request):
     else:
         form = CustomUserCreationForm()
     return render(request, 'signup.html', {'form': form})
+
+
+@csrf_protect
+def my_view(request):
+    # Your view logic here
+    if request.user.user_type == 1:
+        patient_info = request.user  # Assuming the logged-in user is a patient
+        return render(request, 'patient_dashboard.html', {'patient_info': patient_info})
+    elif request.user.user_type == 2:
+        doctor_info = request.user  # Assuming the logged-in user is a doctor
+        return render(request, 'doctor_dashboard.html', {'doctor_info': doctor_info})
+    else:
+        return redirect('login')

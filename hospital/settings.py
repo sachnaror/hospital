@@ -44,6 +44,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
 
+
 ]
 
 CORS_ALLOWED_ORIGINS = [
