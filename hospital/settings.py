@@ -131,7 +131,7 @@ USE_TZ = True
 # STATIC_URL = 'static/'
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/profile_pics/'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
