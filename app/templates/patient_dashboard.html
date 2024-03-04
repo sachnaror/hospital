@@ -1,1 +1,25 @@
-Hello Patient
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Welcome, {{ user.username }}!</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="img-thumbnail">
+        </div>
+        <div class="col-md-6">
+            <h3>Your Details:</h3>
+            <p><strong>First Name:</strong> {{ user.first_name }}</p>
+            <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Address Line 1:</strong> {{ user.address_line1 }}</p>
+            <p><strong>City:</strong> {{ user.city }}</p>
+            <p><strong>State:</strong> {{ user.state }}</p>
+            <p><strong>Postal Code:</strong> {{ user.postal_code }}</p>
+            <p><strong>User Type:</strong> {% if user.user_type == 2 %}Doctor{% else %}Patient{% endif %}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
